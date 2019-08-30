@@ -7,3 +7,4 @@ Contents:
    :maxdepth: 2
 
    import-desktop-client
+   import-cli
