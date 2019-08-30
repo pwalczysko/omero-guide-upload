@@ -8,3 +8,4 @@ Contents:
 
    import-desktop-client
    import-cli
+   import-dropbox
