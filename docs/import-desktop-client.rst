@@ -1,5 +1,5 @@
-**Import data in OMERO using the Desktop Client**
-=================================================
+**Import data using the Desktop Client**
+========================================
 
 Description:
 ------------
@@ -13,13 +13,13 @@ The import for another user requires that the user doing the import has specific
 
 We will show:
 
--  How to install the OMERO.insight desktop client on Windows, Mac and Linux
+-  How to install the OMERO.insight desktop client on Windows, Mac and Linux.
 
 -  How to import data for the user logged in using OMERO.insight.
 
 -  How to select a target Project and Dataset or create a new ones in OMERO for the imports.
 
--  How to add Tags to imported images at the import stage, to facilitate the management of these images later in OMERO.server
+-  How to add Tags to imported images at the import stage, to facilitate the management of these images later in OMERO.server.
 
 -  How to import data for other users in OMERO.insight.
 
@@ -35,27 +35,27 @@ Download the OMERO.insight client corresponding to your operating system at:
 
 **Windows**
 
--  From version 5.5.0, OMERO.insight comes with two installers: .msi and .exe.
+-  From version 5.5.0, OMERO.insight comes with two installers: ``.msi`` and ``.exe``.
 
--  Click onto the downloaded .exe or msi file.
+-  Click onto the downloaded ``.exe`` or ``.msi`` file.
 
--  This will run the installer.The .exe file installs by default in the userspace apps folder. This can be changed during the installation process.
+-  This will run the installer. The ``.exe`` file installs by default in the userspace apps folder. This can be changed during the installation process.
 
    .. image:: images/importinsight2.png
 
    .. image:: images/importinsight3.png
 
--  The .msi installer will deploy the application in the Program Files folder of Windows. *OMERO.insight* is then available to all the users of the target machine. *OMERO.insight* installed in the userspace is only available to the user who did the installation. A Desktop icon and a new *OMERO.insight* Start menu item will be created.
+-  The ``.msi`` installer will deploy the application in the ``Program Files`` folder of Windows. *OMERO.insight* is then available to all the users of the target machine. *OMERO.insight* installed in the userspace is only available to the user who did the installation. A Desktop icon and a new *OMERO.insight* Start menu item will be created.
 
 **Mac**
 
--  From version 5.5.0, OMERO.insight can be installed using an Apple DMG (.dmg) file.
+-  From version 5.5.0, OMERO.insight can be installed using an Apple DMG (``.dmg``) file.
 
--  Mac OS X: Click onto the downloaded .dmg installer to start the installation.
+-  Mac OS X: Click onto the downloaded ``.dmg`` installer to start the installation.
 
    .. image:: images/importinsight4.png
 
--  This will mount the DMG it to your Mac. The DMG mounts in two places: on your desktop and in the Finder sidebar under your hard drive.
+-  This will mount the DMG it to your Mac. The DMG mounts in two places: on your Desktop and in the Finder sidebar under your hard drive.
 
    .. image:: images/importinsight5.png
 
@@ -71,7 +71,7 @@ Download the OMERO.insight client corresponding to your operating system at:
 
 Linux
 
--  Unzip the downloaded .zip file.
+-  Unzip the downloaded ``.zip`` file.
 
    .. image:: images/importinsight7.png
 
@@ -82,41 +82,41 @@ Linux
 Step-by-step:
 -------------
 
-1. Open OMERO.insight and in the login dialog, click on the wrench icon \ |image8a|
+#. Open OMERO.insight and in the login dialog, click on the wrench icon \ |image8a|
 
-2. This will open a list of servers to which you can connect. By default, only “localhost” is listed. Click on the plus icon to add a new line to the list and type into the line the server address.
+#. This will open a list of servers to which you can connect. By default, only "localhost" is listed. Click on the plus icon to add a new line to the list and type into the line the server address.
 
    .. image:: images/importinsight9.png
 
-3.  When done, click Apply.
+#.  When done, click *Apply*.
 
-4.  Log in using the username and password provided.
+#.  Log in using the username and password provided.
 
-5.  In OMERO.insight, click on the Importer Icon |image10|\ in the toolbar.
+#.  In OMERO.insight, click on the Importer Icon |image10|\ in the toolbar.
 
-6.  Browse your local hierarchy in the left-hand pane of the importer, select single images or whole folders and add these to the Queue by clicking on the arrow \ |image11|\ icon.
+#.  Browse your local hierarchy in the left-hand pane of the importer, select single images or whole folders and add these to the Queue by clicking on the arrow \ |image11|\ icon.
 
-7.  In the Import Location window, select the target Project and Dataset (existing or create a new one) to import to.
+#.  In the Import Location window, select the target Project and Dataset (existing or create a new one) to import to.
 
-8.  Note: If no Dataset is selected or created, a new Dataset will be automatically created and named after the folder containing the images to be imported.
+#.  Note: If no Dataset is selected or created, a new Dataset will be automatically created and named after the folder containing the images to be imported.
 
-9.  Optional: Go to the Options tab
+#.  Optional: Go to the *Options* tab
 
-    a. Click on |image12| to bring the Tag selection dialog.
+    - Click on |image12| to bring the Tag selection dialog.
 
-    b. Select the tag(s) on the left-hand side or create a new one.
+    - Select the tag(s) on the left-hand side or create a new one.
 
-    c. Click |image13| to move the tag(s) to the right-hand side.
+    - Click |image13| to move the tag(s) to the right-hand side.
 
-    d. Click Save.
+    - Click Save.
 
-10. Click on the Import button in the bottom-right corner of the Importer window. You should see two progress bars for every image imported, Upload and Processing.
+#. Click on the Import button in the bottom-right corner of the Importer window. You should see two progress bars for every image imported, Upload and Processing.
 
-11. Note: The import of the next image in the queue starts immediately after the Upload of the previous one is finished. The Processing phase of the import is done on the OMERO.server only, and can be finished while the next image(s) is/are being uploaded to the server.
+#. Note: The import of the next image in the queue starts immediately after the Upload of the previous one is finished. The Processing phase of the import is done on the OMERO.server only, and can be finished while the next image(s) is/are being uploaded to the server.
 
-12. Once imports are finished, go back to the OMERO.insight main window and click the Refresh button |image14| above the right-hand pane. This will display the imported images inside the Dataset and/or Project you specified previously in the Import Location window.
+#. Once imports are finished, go back to the OMERO.insight main window and click the Refresh button |image14| above the right-hand pane. This will display the imported images inside the Dataset and/or Project you specified previously in the Import Location window.
 
-13. (demo only step) Now, the demonstrator will log out from OMERO.insight and log in again, this time as some other user and will show the import process again, this time importing a different set of images. After this import, the two sets of images (belonging to two different users) will be shown in the webclient.
+#. (demo only step) Now, the demonstrator will log out from OMERO.insight and log in again, this time as some other user and will show the import process again, this time importing a different set of images. After this import, the two sets of images (belonging to two different users) will be shown in the webclient.
 
 **Import for another user**
 ===========================

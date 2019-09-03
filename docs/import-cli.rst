@@ -1,5 +1,5 @@
-**Import data in OMERO using the Command Line Interface (CLI)**
-===============================================================
+**Import data using the Command Line Interface (CLI)**
+======================================================
 
 Description:
 ------------
@@ -157,7 +157,7 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
 
 #. Description of the files used to set up the import, the files are in the directory ``/OMERO/in-place-import``. See  \ https://github.com/ome/training-scripts/tree/master/practical/other\  and \ https://docs.openmicroscopy.org/latest/omero/users/cli/import-bulk.html#bulk-imports\ for further details.
 
-   - ``import-paths.csv``: (.csv, comma-separated values) this file has at least two columns. In this case the columns are separated by commas. The first column is the name of the target Dataset and the second one is the path to the folder to import. We will import two folders (the import-paths.csv has two rows).
+   - ``import-paths.csv``: (.csv, comma-separated values) this file has at least two columns. In this case the columns are separated by commas. The first column is the name of the target Dataset and the second one is the path to the folder to import. We will import two folders (the ``import-paths.csv`` has two rows).
 
       Example csv (note the comma between the “HeLa” and “/OMERO…”):
 
@@ -166,7 +166,7 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
       ``*Dataset:name:Experiment2-condensation,/OMERO/in-place-import/condensation*``
 
    
-   - bulk.yml: this file defines the various import options: transfer option, checksum algorithm, format of the .csv file, etc. Note that setting the dry_run option to true allows to first run an import in dry_run mode and copy the output to an external file. This is useful when running an import in parallel.
+   - ``bulk.yml``: this file defines the various import options: transfer option, checksum algorithm, format of the .csv file, etc. Note that setting the dry_run option to true allows to first run an import in dry_run mode and copy the output to an external file. This is useful when running an import in parallel.
    
       Example bulk.yml:
 
@@ -203,7 +203,7 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
 
    ``$ bin/omero import --bulk bulk.yml``
 
-#. Go to the webclient during the import process to show the newly created dataset. The new datasets in OMERO are named Experiment1-HeLa and Experiment2-condensation. This was specified in the first column of the import-paths.csv file.
+#. Go to the webclient during the import process to show the newly created dataset. The new datasets in OMERO are named Experiment1-HeLa and Experiment2-condensation. This was specified in the first column of the ``import-paths.csv`` file.
 
 #. Select an image.
 

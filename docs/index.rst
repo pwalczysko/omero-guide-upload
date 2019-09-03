@@ -1,10 +1,10 @@
-Welcome to guide template's documentation!
-==========================================
+Upload data
+===========
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    import-desktop-client
    import-cli
