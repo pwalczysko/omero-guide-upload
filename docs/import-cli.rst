@@ -174,15 +174,15 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
 
       *continue: "true"*
 
-      *transfer: “ln_s”*
+      *transfer: "ln_s"*
 
-      *# exclude: “clientpath”*
+      *# exclude: "clientpath"*
 
-      *checksum_algorithm: “File-Size-64”*
+      *checksum_algorithm: "File-Size-64"*
 
-      *logprefix: “logs”*
+      *logprefix: "logs"*
 
-      *output: “yaml”*
+      *output: "yaml"*
 
       *path: "import-paths.csv"*
 
