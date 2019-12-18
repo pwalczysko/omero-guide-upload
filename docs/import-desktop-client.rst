@@ -87,7 +87,8 @@ Step-by-step:
 #. This will open a list of servers to which you can connect. By default, only "localhost" is listed. Click on the plus icon to add a new line to the list and type into the line the server address.
 
    .. image:: images/importinsight9.png
-
+   .. note::
+      If your server is running on a default port (``4064``), as it is usually the case, then you can simply just type in the server name such as ``my.server.name``. For servers running on a non-default port, e.g. ``54064``, type the address of the server as ``my.server.name:54064`` into the above dialog. Alternatively, you can also type in the IP address of your server, or connect using websocket.
 #.  When done, click *Apply*.
 
 #.  Log in using the username and password provided.
