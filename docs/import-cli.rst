@@ -65,7 +65,7 @@ Note: When importing for another user using the CLI, the importer1 does not have
     
     ``$ ls /OMERO/in-place-import/FRAP``
 
-#.  Active the virtual environment where ``omero-py`` is installed or add it to ``PATH`` e.g.
+#.  Activate the virtual environment where ``omero-py`` is installed or add it to ``PATH`` e.g.
 
     
     ``$ export PATH=/opt/omero/server/venv3/bin:$PATH``
@@ -244,4 +244,3 @@ For more information about CLI import options, go to \ https://docs.openmicrosco
 .. |image4| image:: images/importcli4.png
    :width: 1.90625in
    :height: 0.31771in
-
