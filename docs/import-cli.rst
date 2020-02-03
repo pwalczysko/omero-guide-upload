@@ -70,7 +70,7 @@ Note: When importing for another user using the CLI, the importer1 does not have
     
     ``$ export PATH=/opt/omero/server/venv3/bin:$PATH``
 
-#. Point ``OMERODIR`` to the location where the OMERO server is installed e.g.
+#.  Point ``OMERODIR`` to the location where the OMERO server is installed e.g.
 
     ``$ ls export OMERODIR=/opt/omero/server/OMERO.server``
 
