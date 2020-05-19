@@ -25,13 +25,13 @@ We will show:
 
    -  https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html
 
-   -  `https://docs.openmicroscopy.org/omero/latest/users/cli/index.html <https://docs.openmicroscopy.org/omero/5.5.1/users/cli/index.html>`__
+   -  `https://docs.openmicroscopy.org/omero/latest/users/cli/index.html <https://docs.openmicroscopy.org/omero/latest/users/cli/index.html>`__
 
-   -  `https://docs.openmicroscopy.org/omero/latest/users/cli/import-target.html <https://docs.openmicroscopy.org/omero/5.5.1/users/cli/import-target.html>`__
+   -  `https://docs.openmicroscopy.org/omero/latest/users/cli/import-target.html <https://docs.openmicroscopy.org/omero/latest/users/cli/import-target.html>`__
 
-   -  `https://docs.openmicroscopy.org/omero/latest/sysadmins/in-place-import.html <https://docs.openmicroscopy.org/omero/5.5.1/sysadmins/in-place-import.html>`__
+   -  `https://docs.openmicroscopy.org/omero/latest/sysadmins/in-place-import.html <https://docs.openmicroscopy.org/omero/latest/sysadmins/in-place-import.html>`__
 
-   -  `https://docs.openmicroscopy.org/omero/latest/users/cli/import-bulk.html <https://docs.openmicroscopy.org/omero/5.5.1/users/cli/import-bulk.html>`__
+   -  `https://docs.openmicroscopy.org/omero/latest/users/cli/import-bulk.html <https://docs.openmicroscopy.org/omero/latest/users/cli/import-bulk.html>`__
 
 -  Data: example images from
 
@@ -43,7 +43,7 @@ We will show:
 
 -  Example files for bulk import
 
-   -  `https://github.com/ome/training-scripts/tree/latest/practical/other <https://github.com/ome/training-scripts/tree/v0.6.0/practical/other>`__
+   -  `https://github.com/ome/training-scripts/tree/latest/practical/other <https://github.com/ome/training-scripts/tree/v0.7.0/practical/other>`__
 
 Setup:
 ------
@@ -65,31 +65,38 @@ Note: When importing for another user using the CLI, the importer1 does not have
     
     ``$ ls /OMERO/in-place-import/FRAP``
 
-#.  Run ``$ cd /opt/omero/server/OMERO.server/bin``
+#.  Activate the virtual environment where ``omero-py`` is installed or add it to ``PATH`` e.g.
+
+    
+    ``$ export PATH=/opt/omero/server/venv3/bin:$PATH``
+
+#.  Point ``OMERODIR`` to the location where the OMERO server is installed e.g.
+
+    ``$ ls export OMERODIR=/opt/omero/server/OMERO.server``
 
 #.  The importer1 user logs in as themselves
 
-    ``$ ./omero -u importer1 login``
+    ``$ omero -u importer1 login``
 
 #.  Creates a Dataset import_for_myself
 
-    ``$ DID=$(./omero obj new Dataset name=import_for_myself)``
+    ``$ DID=$(omero obj new Dataset name=import_for_myself)``
 
 #.  Import the data in the newly created Dataset:
 
-    ``$ ./omero import -d $DID /OMERO/in-place-import/FRAP/U20S-RCC1.10_R3D_FRAP.dv``
+    ``$ omero import -d $DID /OMERO/in-place-import/FRAP/U20S-RCC1.10_R3D_FRAP.dv``
 
 #.  The importer1 user logs in as user-1:
 
-    ``$ ./omero --sudo importer1 -u user-1 login``
+    ``$ omero --sudo importer1 -u user-1 login``
 
 #.  Create a Dataset import_for_user_one as user-1:
 
-    ``$ DID=$(./omero obj new Dataset name=import_for_user_one)``
+    ``$ DID=$(omero obj new Dataset name=import_for_user_one)``
 
 #.  Import the data in the newly created Dataset:
 
-    ``$ ./omero import -d $DID /OMERO/in-place-import/FRAP/U20S-RCC1.10_R3D_FRAP.dv``
+    ``$ omero import -d $DID /OMERO/in-place-import/FRAP/U20S-RCC1.10_R3D_FRAP.dv``
 
 #. Check that the images are successfully imported.
 
@@ -237,4 +244,3 @@ For more information about CLI import options, go to \ https://docs.openmicrosco
 .. |image4| image:: images/importcli4.png
    :width: 1.90625in
    :height: 0.31771in
-
