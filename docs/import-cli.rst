@@ -72,7 +72,7 @@ Note: When importing for another user using the CLI, the importer1 does not have
 
 #.  Point ``OMERODIR`` to the location where the OMERO server is installed e.g.
 
-    ``$ ls export OMERODIR=/opt/omero/server/OMERO.server``
+    ``$ export OMERODIR=/opt/omero/server/OMERO.server``
 
 #.  The importer1 user logs in as themselves
 
@@ -138,12 +138,12 @@ Someone wanting to perform an in-place import MUST have:
 **Step-by-step:**
 -----------------
 
--  We are still in the omero server directory: ``/opt/omero/server/OMERO.server/bin``
+- Make sure that the virtual environment where ``omero-py`` is installed is activated and ``OMERODIR`` is defined, as above
 
--  Log in again: ``$ ./omero --sudo importer1 -u user-1 login``
+-  Log in again: ``$ omero --sudo importer1 -u user-1 login``
 
--  ‘In place’ import a large SVS file into the same dataset as before:
-      ``$ ./omero import -d $DID --transfer=ln_s /OMERO/in-place-import/svs/77917.svs``
+-  ‘In place’ import a large SVS file into the same dataset as above:
+      ``$ omero import -d $DID --transfer=ln_s /OMERO/in-place-import/svs/77917.svs``
 
 -  Check that the image is successfully imported.
 
@@ -200,15 +200,15 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
           -  *path*
 
 
-#. Go to /OMERO/in-place-import i.e. ``cd /OMERO/in-place-import``
+#. Find the place where the data are stored outwith OMERO, for example /OMERO/in-place-import i.e. ``cd /OMERO/in-place-import``
 
 #. The importer1 (Facility Manager with ability to import for others) user logs in as user-1:
 
-   ``$ bin/omero --sudo importer1 -u user-1 login``
+   ``$ omero --sudo importer1 -u user-1 login``
 
 #. Import the data using the --bulk command:
 
-   ``$ bin/omero import --bulk bulk.yml``
+   ``$ omero import --bulk bulk.yml``
 
 #. Go to the webclient during the import process to show the newly created dataset. The new datasets in OMERO are named Experiment1-HeLa and Experiment2-condensation. This was specified in the first column of the ``import-paths.csv`` file.
 
