@@ -64,7 +64,7 @@ Setup:
     
     $ export PATH=/opt/omero/server/venv3/bin:$PATH
 
-#.  Change the rendering of images in one Dataset. The variable ``$ID​`` below is the ID of the ​selected Dataset. Run::
+#.  The variable ``$ID​`` below is the ID of the ​selected Dataset. To change the rendering of images in one Dataset, run::
     
     $ ​omero render set Dataset:$ID local_path/to/renderingdef.yml
 
