@@ -1,5 +1,5 @@
-**Import data using the Command Line Interface (CLI)**
-======================================================
+Import data using the Command Line Interface (CLI)
+==================================================
 
 Description:
 ------------
@@ -100,8 +100,8 @@ Note: When importing for another user using the CLI, the importer1 does not have
 
 #. Check that the images are successfully imported.
 
-**In-place Import CLI** 
-========================
+In-place Import CLI 
+===================
 
 Instead of being copied into OMERO’s managed repository, the image files
 stay at their original place and are just linked into the repository.
@@ -151,8 +151,8 @@ Someone wanting to perform an in-place import MUST have:
 
 -  Note: The script \ https://github.com/ome/training-scripts/blob/master/maintenance/scripts/in_place_import_as.sh\  shows how to perform the in-place import steps described above in one single command.
 
-**Bulk Import CLI**
-===================
+Bulk Import CLI
+===============
 
 In this example, we show how to combine several import strategies using a configuration file. This is a strategy heavily used to import data to \ https://idr.openmicroscopy.org/\ .
 

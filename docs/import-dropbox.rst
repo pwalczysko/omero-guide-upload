@@ -1,5 +1,5 @@
-**Import data using OMERO.dropbox**
-===================================
+Import data using OMERO.dropbox
+===============================
 
 **Description:**
 ----------------

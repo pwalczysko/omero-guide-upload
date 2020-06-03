@@ -1,5 +1,5 @@
-**Import data using the Desktop Client**
-========================================
+Import data using the Desktop Client
+====================================
 
 Description:
 ------------
@@ -119,8 +119,8 @@ Step-by-step:
 
 #. (demo only step) Now, the demonstrator will log out from OMERO.insight and log in again, this time as some other user and will show the import process again, this time importing a different set of images. After this import, the two sets of images (belonging to two different users) will be shown in the webclient.
 
-**Import for another user**
-===========================
+Import for another user
+=======================
 
 In this example, we show how to import data for another user. A facility manager importer1 with restricted admin privileges imports the data for user-1. The facility manager has been given the ability to import for others.
 
