@@ -112,7 +112,7 @@ It is only available for the CLI importer, using the argument ``--transfer=ln_s`
 
 **Advantages:**
 
--  All in-place import scenarios provide non-copying benefit. Data that is too large toxist in multiple places, or which is accessed too frequently in its original form to be renamed,remains where it was originally acquired.
+-  All in-place import scenarios provide non-copying benefit. Data that is too large to exist in multiple places, or which is accessed too frequently in its original form to be renamed, remains where it was originally acquired.
 
 **Limitations:**
 
@@ -122,11 +122,11 @@ It is only available for the CLI importer, using the argument ``--transfer=ln_s`
 
 **Important:**
 
-Someone wanting to perform an in-place import MUST have:
+A user performing an in-place import MUST have:
 
 -  a regular OMERO account
 
--  an OS-account with access to bin/omero
+-  an OS-account with ability to run omero commands on server machine
 
 -  read access to the location of the data
 
@@ -165,7 +165,7 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
 
 #. Note: Connecting over SSH is necessary only if you intend to import in-place. If a classic import is being performed, you can connect to the server remotely using OMERO.cli and still use the bulk import as described below.
 
-#. Description of the files used to set up the import, the files are in the directory ``/OMERO/in-place-import``. See :download:`bulk.yml <../scripts/bulk.yml>`, :download:`import-paths.csv <../scripts/import-paths.csv>` and `import-bulk.html#bulk-imports <https://docs.openmicroscopy.org/latest/omero/users/cli/import-bulk.html#bulk-imports>`_ for further details.
+#. Description of the files used to set up the import (see :download:`bulk.yml <../scripts/bulk.yml>`, :download:`import-paths.csv <../scripts/import-paths.csv>` and `import-bulk.html#bulk-imports <https://docs.openmicroscopy.org/latest/omero/users/cli/import-bulk.html#bulk-imports>`_ for further details).
 
    - ``import-paths.csv``: (.csv, comma-separated values) this file has at least two columns. In this case the columns are separated by commas. The first column is the name of the target Dataset and the second one is the path to the folder to import. We will import two folders (the ``import-paths.csv`` has two rows).
 
@@ -203,7 +203,9 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
             -  *path*
 
 
-#. Find the place where the data are stored outwith OMERO, for example /OMERO/in-place-import i.e. ``cd /OMERO/in-place-import``
+#. Find the place where the ``bulk.yml`` file is located, for example ``/OMERO/in-place-import``::
+
+   $ cd /OMERO/in-place-import
 
 #. The importer1 (Facility Manager with ability to import for others) user logs in as user-1::
 
@@ -226,6 +228,8 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
 **Advantages:**
 
 -  Large amount of data imported using one import command.
+
+-  Heterogeneous data for multiple users can be imported using bulk import in combination with bash scripting, e.g. `in_place_import_as.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/in_place_import_as.sh>`_
 
 -  Reproducible import.
 
