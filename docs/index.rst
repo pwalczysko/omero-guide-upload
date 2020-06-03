@@ -8,3 +8,4 @@ Contents:
 
    import
    render
+   metadata
