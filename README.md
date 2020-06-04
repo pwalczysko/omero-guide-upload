@@ -3,6 +3,8 @@
 
 [![Documentation Status](https://readthedocs.org/projects/omero-guide-upload/badge/?version=latest)](https://omero-guides.readthedocs.io/en/latest/upload/docs/import.html)
 
+Documentation at [Upload data](https://omero-guides.readthedocs.io/en/latest/upload/docs/index.html)
+
 This a Sphinx based documentation. 
 If you are unfamiliar with Sphinx, we recommend that you first read 
 [Getting Started with Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html).
