@@ -10,7 +10,7 @@ This action is typically done after a successful import of images.
 
 We will show:
 
--  How to import metadata from local CSV file in a bulk manner and turn them into OMERO.tables on images using CLI
+- How to import metadata from local CSV file in a bulk manner and turn them into OMERO.tables on images using CLI
 
 - How to turn the OMERO.tables on images into Key-Value pair annotations on images in bulk manner using CLI
 
