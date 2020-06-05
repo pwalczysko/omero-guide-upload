@@ -85,7 +85,7 @@ Setup:
 
 #.  Go to your browser and OMERO.web, select the images in the Project you targeted and verify that they have now new Key-Value pair annotations displayed in the right-hand pane.
 
-#.  Still in OMERO.web, create a new Dataset and copy into it 4 images, preferably images which have nor OMERO.tables on them neither any Key-Value pairs attached. Note the names of the images you are copying in.
+#.  Still in OMERO.web, create a new Dataset and copy into it 4 images, preferably images which have neither OMERO.tables on them nor any Key-Value pairs attached. Note the names of the images you are copying in.
 
 #.  Go to the https://pypi.org/project/omero-metadata/ and find the section named ``populate``. Copy the ``project.csv`` from that section and paste it locally, either into your text editor, or into Microsoft Excel. Edit the names of the images in the first column to match the names of the images you copied into your Dataset in the previous step. Also, edit the name of the Dataset in the second column to match the name of your Dataset in OMERO.web. Save the file locally as csv.
 
