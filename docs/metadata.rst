@@ -23,7 +23,7 @@ We will show:
 
 -  Documentation:
 
-   -  https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html
+   -  https://docs.openmicroscopy.org/omero/latest/users/cli/installation.html
 
    -  `https://docs.openmicroscopy.org/omero/latest/users/cli/index.html <https://docs.openmicroscopy.org/omero/latest/users/cli/index.html>`__
 
@@ -49,7 +49,7 @@ Setup:
 
 **Metadata plugin installation**
 
-- Go to the environment where you installed your OMERO.cli as specified under -  https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html.
+- Go to the environment where you installed your OMERO.cli as specified under -  https://docs.openmicroscopy.org/omero/latest/users/cli/installation.html.
 
 - Activate the virtual environment.
 
