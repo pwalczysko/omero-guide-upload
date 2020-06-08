@@ -39,9 +39,10 @@ We will show:
 
    - https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-bulkmap-config.yml
 
--  Annotation csv file defines the content of OMERO.tables for each image.
+-  Annotation csv files define the content of OMERO.tables for each image.
 
    - https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-annotation.csv
+   - :download:`four-images.csv <four-images.csv>`
 
 Setup:
 ------
@@ -87,7 +88,7 @@ Setup:
 
 #.  Still in OMERO.web, create a new Dataset and copy into it 4 images, preferably images which have neither OMERO.tables on them nor any Key-Value pairs attached. Note the names of the images you are copying in.
 
-#.  Go to the https://pypi.org/project/omero-metadata/ and find the section named ``populate``. Copy the ``project.csv`` from that section and paste it locally, either into your text editor, or into Microsoft Excel. Edit the names of the images in the first column to match the names of the images you copied into your Dataset in the previous step. Also, edit the name of the Dataset in the second column to match the name of your Dataset in OMERO.web. Save the file locally as csv.
+#.  Go to the https://pypi.org/project/omero-metadata/ and find the section named ``populate``. Study the ``project.csv``. You can either take the ``project.csv`` file from there, or more conveniently, you can download directly its copy :download:`four-images.csv <four-images.csv>`. Open the csv in Excel and edit the names of the images in the first column to match the names of the images you copied into your Dataset in the previous step. Also, edit the name of the Dataset in the second column to match the name of your Dataset in OMERO.web. Save the file locally as csv.
 
 #.  In your OMERO.web, upload the csv you just saved and attach it onto the Dataset you created previously.
 
