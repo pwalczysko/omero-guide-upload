@@ -39,16 +39,16 @@ Resources
 -  Bulkmap config yml files defining the various Key-Value pairs parameters, such as the groups and other parameters.
 
    - https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-bulkmap-config.yml
-   - :download:`simple-annotation-bulkmap-config.yml <simple-annotation-bulkmap-config.yml>`
+   - :download:`simple-annotation-bulkmap-config.yml <../scripts/simple-annotation-bulkmap-config.yml>`
 
 -  Annotation CSV files define the content of OMERO.tables for each image.
 
    - https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-annotation.csv
-   - :download:`simple-annotation.csv <simple-annotation.csv>`
-   - :download:`four-images.csv <four-images.csv>`
+   - :download:`simple-annotation.csv <../scripts/simple-annotation.csv>`
+   - :download:`four-images.csv <../scripts/four-images.csv>`
 
-Setup:
-------
+Setup
+-----
 
 **Metadata plugin installation**
 
@@ -60,8 +60,8 @@ Setup:
     
     $ pip install omero-metadata
 
-Step-by-step:
--------------
+Step-by-step
+------------
 
 #.  On your local machine, open a terminal
 
@@ -69,7 +69,7 @@ Step-by-step:
 
     $ export PATH=/opt/omero/server/venv3/bin:$PATH
 
-#.  Download the CSV from https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-annotation.csv if you have access to the idr0021 data https://idr.openmicroscopy.org/webclient/?show=project-51 in your OMERO.server. Alternatively, download :download:`simple-annotation.csv <simple-annotation.csv>`, which will allow you to work with the siRNAi-HeLa dataset, which you can download from https://downloads.openmicroscopy.org/images/DV/siRNAi-HeLa/.
+#.  Download the CSV from `idr0021-experimentA-annotation.csv <https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-annotation.csv>`_ if you have access to the `idr0021 <https://idr.openmicroscopy.org/webclient/?show=project-51>`_ data  in your OMERO.server. Alternatively, download :download:`simple-annotation.csv <../scripts/simple-annotation.csv>`, which will allow you to work with the siRNAi-HeLa dataset, which you can download from https://downloads.openmicroscopy.org/images/DV/siRNAi-HeLa/.
 
 #.  The variable ``$ID​`` below is the ID of the ​Project, in this example case it is the Project containing the idr0021 study. If you are working with the siRNAi-HeLa data, replace in the following example the "Project" with a "Dataset" and the ``idr0021-experimentA-annotation.csv`` with ``simple-annotation.csv``. To add annotations from a local CSV file to the images in the said Project or Dataset in the form of OMERO.tables, run::
     
@@ -85,7 +85,7 @@ Step-by-step:
 
     |image2|
 
-#.  Go back to your terminal. Download the idr0021-experimentA-bulkmap-config.yml file https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-bulkmap-config.yml. Alternatively, in case you are working with the siRNAi-HeLa Dataset, download :download:`simple-annotation-bulkmap-config.yml <simple-annotation-bulkmap-config.yml>`.
+#.  Go back to your terminal. Download the `idr0021-experimentA-bulkmap-config.yml <https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-bulkmap-config.yml>`_ file . Alternatively, in case you are working with the siRNAi-HeLa Dataset, download :download:`simple-annotation-bulkmap-config.yml <../scripts/simple-annotation-bulkmap-config.yml>`.
 
 #.  If you are working with the IDR data, open the downloaded ``idr0021-experimentA-bulkmap-config.yml`` file in a text editor and delete the ``Advanced options...`` section. Save the file and run::
 
@@ -95,17 +95,17 @@ Step-by-step:
 
     $ omero metadata populate --context bulkmap --cfg local/path/to/simple-annotation-bulkmap-config.yml --batch 100 Dataset:$ID
 
-#.  Go to your browser and OMERO.web, select the images in the Project or Dataset you targeted and verify that they have now new Key-Value pairs displayed in the right-hand pane.
+#.  Go to your browser and in OMERO.web, select the images in the Project or Dataset you targeted and verify that they have now new Key-Value pairs displayed in the right-hand pane.
 
     |image3a|
 
-#.  Still in OMERO.web, create a new Dataset and copy into it four images, preferably images which have neither OMERO.tables on them nor any Key-Value pairs attached. Note the names of the images you are copying in.
+#.  Still in OMERO.web, create a new Dataset and copy into it four images, preferably images which have neither OMERO.tables on them nor any Key-Value pairs attached. Note the name of the images you are copying in.
 
     |image4|
 
-#.  Go to the https://pypi.org/project/omero-metadata/ and find the section named ``populate``. Study the ``project.csv``. You can either take the ``project.csv`` file from there, or more conveniently, you can download directly its copy :download:`four-images.csv <four-images.csv>`. Open the CSV in Excel and edit the names of the images in the first column to match the names of the images you copied into your Dataset in the previous step. Also, edit the name of the Dataset in the second column to match the name of your Dataset in OMERO.web. Save the file locally as CSV.
+#.  Go to the https://pypi.org/project/omero-metadata/ and find the section named ``populate``. Study the ``project.csv``. You can either take the ``project.csv`` file from there, or more conveniently, you can download directly its copy :download:`four-images.csv <../scripts/four-images.csv>`. Open the CSV file in Excel and edit the name of the images in the first column to match the names of the images you copied into your Dataset in the previous step. Also, edit the name of the Dataset in the second column to match the name of your Dataset in OMERO.web. Save the file locally as CSV.
 
-#.  In your OMERO.web, upload the CSV you just saved and attach it onto the Dataset you created previously.
+#.  In your OMERO.web, upload the CSV file you just saved and attach it onto the Dataset you created previously.
 
     |image5|
 
