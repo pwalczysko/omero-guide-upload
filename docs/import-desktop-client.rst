@@ -1,8 +1,8 @@
 Import data using the Desktop Client
 ====================================
 
-Description:
-------------
+Description
+-----------
 
 In the first part, we first show how to import data by yourself and for yourself into OMERO using various import strategies. This will be mainly done using the OMERO.insight desktop client.
 
@@ -23,8 +23,8 @@ We will show:
 
 -  How to import data for other users in OMERO.insight.
 
-Setup:
-------
+Setup
+-----
 
 OMERO.insight desktop client installation instructions:.
 
@@ -79,8 +79,8 @@ Linux
 
    .. image:: images/importinsight8.png
 
-Step-by-step:
--------------
+Step-by-step
+------------
 
 #. Open OMERO.insight and in the login dialog, click on the wrench icon \ |image8a|
 

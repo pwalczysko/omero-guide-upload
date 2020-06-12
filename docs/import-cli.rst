@@ -1,8 +1,8 @@
 Import data using the Command Line Interface (CLI)
 ==================================================
 
-Description:
-------------
+Description
+-----------
 
 This chapter will show how to import data for another user, using Command Line Interface (CLI).
 
@@ -18,8 +18,8 @@ We will show:
 
 -  How to deal with imports of large amounts of data in CLI, using the --bulk option and helper csv and yml files which define what is to be imported and how.
 
-**Resources:**
---------------
+Resources
+---------
 
 -  Documentation:
 
@@ -45,8 +45,8 @@ We will show:
 
    -  :download:`bulk.yml <../scripts/bulk.yml>`
 
-Setup:
-------
+Setup
+-----
 
 **CLI Importer installation**
 
@@ -56,8 +56,8 @@ found at \ https://docs.openmicroscopy.org/latest/omero/users/cli/installation.h
 Note: When importing for another user using the CLI, the importer1 does not have to be a member of the target group.
 
 
-**Step-by-step:**
------------------
+Step-by-step
+------------
 
 #.  Open a terminal and connect to the server as importer1 using ``ssh``.
 

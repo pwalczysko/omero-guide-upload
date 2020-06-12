@@ -1,8 +1,8 @@
 Import metadata using the Command Line Interface (CLI)
 ======================================================
 
-Description:
-------------
+Description
+-----------
 
 This chapter will show how to import metadata starting from a local CSV file and ending with OMERO.tables on images or Key-Value pairs on images using the Command Line Interface (CLI) and the OMERO server-side scripts.
 
@@ -18,8 +18,8 @@ We will show:
 
 - How to construct a simple file to turn the metadata stored in OMERO.tables into Key-Value pairs on images using CLI
 
-**Resources:**
---------------
+Resources
+---------
 
 -  Documentation:
 

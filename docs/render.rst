@@ -1,8 +1,8 @@
 Change image rendering settings and channel names using the Command Line Interface (CLI)
 ========================================================================================
 
-Description:
-------------
+Description
+-----------
 
 This chapter will show how to change rendering settings on images using the Command Line Interface (CLI).
 
@@ -12,8 +12,8 @@ We will show:
 
 -  How to change rendering settings of large amount of images on the CLI in a repeatable manner.
 
-**Resources:**
---------------
+Resources
+---------
 
 -  Documentation:
 
@@ -42,8 +42,8 @@ We will show:
 
    - https://github.com/ome/training-scripts/blob/master/maintenance/scripts/apply_rnd_settings_as.sh
 
-Setup:
-------
+Setup
+-----
 
 **Rendering plugin installation**
 
@@ -55,8 +55,8 @@ Setup:
     
     $ pip install omero-cli-render
 
-**Step-by-step:**
------------------
+Step-by-step
+------------
 
 #.  On your local machine, open a terminal
 
