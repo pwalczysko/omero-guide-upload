@@ -1,8 +1,8 @@
 Import data using OMERO.dropbox
 ===============================
 
-**Description:**
-----------------
+Description
+-----------
 
 OMERO.dropbox allows to import files into OMERO automatically, by means
 of offline import from a watched directory. Typically, each user has a
@@ -21,8 +21,8 @@ We will show
 
 -  How to import several files for two different users using OMERO.dropbox. The image files are manually copied into the prepared folders watched by OMERO.dropbox.
 
-**Resources:**
---------------
+Resources
+---------
 
 -  Documentation:
 
@@ -32,8 +32,8 @@ We will show
 
 -  Data: example images from \ https://downloads.openmicroscopy.org/images/DV/alexia/cajal-bodies/
 
-**Setup:**
-----------
+Setup
+-----
 
 This example setup will help you to understand OMERO.dropbox functionality. Later, you can choose the setup you like for your OMERO.server studying detailed instructions at \ https://docs.openmicroscopy.org/latest/omero/sysadmins/dropbox.html#advanced-use
 
@@ -74,8 +74,8 @@ Below are the installation instructions.
 
 -  ``$ mkdir user-2``
 
-Step-by-step:
--------------
+Step-by-step
+------------
 
 #. Open a browser window.
 

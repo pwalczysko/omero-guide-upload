@@ -1,0 +1,6 @@
+# header s,s,d,l,s
+Image Name,Dataset Name,ROI_Area,Channel_Index,Channel_Name
+Centrin_PCNT_Cep215_20110506_Fri-1608_0_SIR_PRJ.dv,dataset01,0.0469,1,DAPI
+Cep215_PCNT_gtub_20110506_Fri-1721_0_SIR_PRJ.dv,dataset01,0.142,2,GFP
+Cep215_PCNT_NEDD1_20110505_Thu-1403_0_SIR_PRJ.dv,dataset01,0.093,3,TRITC
+siControl_N20_Cep215_I_20110411_Mon-1509_0_SIR_PRJ.dv,dataset01,0.429,4,Cy5
