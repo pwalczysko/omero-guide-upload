@@ -106,7 +106,7 @@ columns:
         # "clientvalue" can be used to override the value of the map-
         # annotation key-value. The "value" is substituted using
         # Jinja2 templates.
-        clientvalue: http://www.ensembl.org/id/{{ value|urlencode }}
+        clientvalue: https://www.ensembl.org/id/{{ value|urlencode }}
         include: yes
       - name: Comment [Gene Symbol]
         clientname: Gene Symbol
