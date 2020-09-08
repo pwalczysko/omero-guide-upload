@@ -8,11 +8,11 @@ This chapter will show how to import data for another user, using Command Line I
 
 The user importing the data needs to have some admin (or restricted-admin) privileges. More information about restricted privileges can be found at \ https://docs.openmicroscopy.org/latest/omero/sysadmins/restricted-admins.html
 
-The import for another user will be done only as demo since the user is required to have specific privileges. We will use a user with login name importer1, who could be in real life e.g. a facility manager.
+The import for another user will be done only as demo since the user is required to have specific privileges. We will use a user with login name ``importer1``, who could be in real life e.g. a facility manager.
 
 We will show:
 
--  How to import data using the CLI for myself and for others
+-  How to import data using the CLI for myself and for others into a remote OMERO.server
 
 -  How to import data using the CLI “in-place”, which means not copying the imported data into OMERO. Instead, OMERO will point to the original location of “in-place” imported files, thus preventing data duplication.
 
@@ -51,60 +51,59 @@ Setup
 **CLI Importer installation**
 
 Client libraries from the OMERO.server have to be installed on the client to import images using CLI. The installation instructions can be
-found at \ https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html\ .
+found at https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html.
 
-Note: When importing for another user using the CLI, the importer1 does not have to be a member of the target group.
+Note: When importing for another user using the CLI, the ``importer1`` does not have to be a member of the target group.
 
 
 Step-by-step
 ------------
 
-#.  Open a terminal and connect to the server as importer1 using ``ssh``.
+#. If you did not do so already, open a terminal wondow on your local machine and activate the conda environment where your ``omero-py`` is installed (see the Setup section above):: 
 
-#.  The aim is to import an image from /OMERO/in-place-import/FRAP::
-    
-    $ ls /OMERO/in-place-import/FRAP
+   $ conda activate myenv
 
-#.  Activate the virtual environment where ``omero-py`` is installed or add it to ``PATH`` e.g.::
+#. Set the ``OMERODIR`` variable to point to the downloaded and unzipped OMERO server dir (see the Setup section above)::
 
-    
-    $ export PATH=/opt/omero/server/venv3/bin:$PATH
+   $ export OMERODIR=/path/to/OMERO.server-x.x.x-ice36-bxx
 
-#.  Point ``OMERODIR`` to the location where the OMERO server is installed e.g.::
+#. Login to the OMERO.server you wish to import to. This can be a remote OMERO.server. In the below example we log in as the user ``importer1``, who will import for themselves::
 
-    $ export OMERODIR=/opt/omero/server/OMERO.server
+   $ omero -s your-server-address -u importer1 login
 
-#.  The importer1 user logs in as themselves::
+#. Go to the directory where there are some images you wish to import::
 
-    $ omero -u importer1 login
+   $ cd /path/to/images/directory/
 
-#.  Creates a Dataset import_for_myself::
+#. Create an OMERO Dataset to import to::
 
-    $ DID=$(omero obj new Dataset name=import_for_myself)
+   $ DID=$(omero obj new Dataset name=import_for_myself)
 
-#.  Import the data in the newly created Dataset::
+#. Import the images as ``importer1`` into the newly created Dataset. You can import a single image as in the example below, or a whole directory of images::
 
-    $ omero import -d $DID /OMERO/in-place-import/FRAP/U20S-RCC1.10_R3D_FRAP.dv
+   $ omero import -d $DID <your-image-name>
 
-#.  The importer1 user logs in as user-1::
+#. Log in to OMERO.web as ``importer1`` and verify the imported image in the newly created dataset ``import_for_myself``.
 
-    $ omero --sudo importer1 -u user-1 login
+#. Import an image for another user, for example ``user-1``. For that, your ``importer1`` user logs in as ``user-1``::
 
-#.  Create a Dataset import_for_user_one as user-1::
+   $ omero --sudo importer1 -u user-1 login
 
-    $ DID=$(omero obj new Dataset name=import_for_user_one)
+#. Create a Dataset ``import_for_user_one`` as ``user-1``::
 
-#.  Import the data in the newly created Dataset::
+   $ DID=$(omero obj new Dataset name=import_for_user_one)
 
-    $ omero import -d $DID /OMERO/in-place-import/FRAP/U20S-RCC1.10_R3D_FRAP.dv
+#. Import the data in the newly created Dataset::
 
-#. Check that the images are successfully imported.
+   $ omero import -d $DID <path-to-image-or-directory-with-images>
+
+#. Check that the image(s) are successfully imported and that the image(s) and the containing Dataset both belong to ``user-1`` (not ``importer1``). 
+
 
 In-place Import using the CLI 
 =============================
 
-Instead of being copied into OMERO’s managed repository, the image files
-stay at their original place and are just linked into the repository.
+Instead of being copied into OMERO’s managed repository, the image files stay at their original place and are just linked into the repository.
 
 It is only available for the CLI importer, using the argument ``--transfer=ln_s``.
 
@@ -138,13 +137,29 @@ A user performing an in-place import MUST have:
 **Step-by-step:**
 -----------------
 
-- Make sure that the virtual environment where ``omero-py`` is installed is activated and ``OMERODIR`` is defined, as above
+#. Connect to the machine on which the OMERO.server is running as OS user ``importer1`` using ``ssh``.
 
--  Log in again::
+#. The aim is to import an image from ``/OMERO/in-place-import/FRAP``::
+    
+   $ ls /OMERO/in-place-import/FRAP
 
-    $ omero --sudo importer1 -u user-1 login
+#. Activate the virtual environment where ``omero-py`` is installed or add it to ``PATH``. In the example below, the path to the OMERO.server is ``/opt/omero/server``::
 
--  ‘In place’ import a large SVS file into the same dataset as above::
+   $ export PATH=/opt/omero/server/venv3/bin:$PATH
+
+#. Point ``OMERODIR`` to the location where the OMERO server is installed e.g.::
+
+   $ export OMERODIR=/opt/omero/server/OMERO.server
+
+#. Import now data for another user, this time a large image where the advantage of not copying the image file onto the server is most visible. The ``importer1`` user logs in as ``user-1``::
+
+   $ omero --sudo importer1 -u user-1 login
+
+#. Create a Dataset ``import_for_user_one``::
+
+   $ DID=$(omero obj new Dataset name=import_for_user_one)
+
+-  ‘In place’ import a large SVS file into the ``import_for_user_one`` dataset::
 
     $ omero import -d $DID --transfer=ln_s /OMERO/in-place-import/svs/77917.svs
 
@@ -157,13 +172,13 @@ A user performing an in-place import MUST have:
 Bulk Import using the CLI
 =========================
 
-In this example, we show how to combine several import strategies using a configuration file. This is a strategy heavily used to import data to \ https://idr.openmicroscopy.org/\ .
+In this example, we show how to combine several import strategies using a configuration file. This is a strategy heavily used to import data to https://idr.openmicroscopy.org/.
 
-We import two folders named *siRNA-HeLa* and *condensation*. For this training, the path to the OMERO.server is /opt/omero/server.
+We import two folders named *siRNA-HeLa* and *condensation*.
 
-#. Open a terminal and connect to the server as importer1 over ``SSH``.
+Note: Connecting over SSH is necessary only if you intend to import in-place. If you do not wish to perform the bulk import in "in-place" manner, you can connect to the server remotely using locally installed OMERO.cli and adjust the ``bulk.yml`` file by commenting out the ``transfer...`` line, then follow the steps as described below.
 
-#. Note: Connecting over SSH is necessary only if you intend to import in-place. If a classic import is being performed, you can connect to the server remotely using OMERO.cli and still use the bulk import as described below.
+#. Open a terminal and connect to the server (for example as ``importer1``) over ``SSH``. Alternatively, use your local terminal with installed OMERO.cli if not importing "in-place".
 
 #. Description of the files used to set up the import (see :download:`bulk.yml <../scripts/bulk.yml>`, :download:`import-paths.csv <../scripts/import-paths.csv>` and `import-bulk.html#bulk-imports <https://docs.openmicroscopy.org/latest/omero/users/cli/import-bulk.html#bulk-imports>`_ for further details).
 
@@ -176,7 +191,7 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
       ``*Dataset:name:Experiment2-condensation,/OMERO/in-place-import/condensation*``
 
    
-   - ``bulk.yml``: this file defines the various import options: transfer option, checksum algorithm, format of the .csv file, etc. Note that setting the dry_run option to true allows to first run an import in dry_run mode and copy the output to an external file. This is useful when running an import in parallel.
+   - ``bulk.yml``: this file defines the various import options: transfer option, checksum algorithm, format of the .csv file, etc. Note that setting the dry_run option to true allows to first run an import in dry_run mode and copy the output to an external file. This is useful when running an import in parallel. Comment out the ``transfer" "ln_s"`` if not importing "in-place".
    
       Example bulk.yml:
 
@@ -203,11 +218,19 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
             -  *path*
 
 
+#. Activate the virtual environment where ``omero-py`` is installed or add it to ``PATH``. In the example below, the path to the OMERO.server is ``/opt/omero/server``::
+
+   $ export PATH=/opt/omero/server/venv3/bin:$PATH
+
+#. Point ``OMERODIR`` to the location where the OMERO server is installed e.g.::
+
+   $ export OMERODIR=/opt/omero/server/OMERO.server
+
 #. Find the place where the ``bulk.yml`` file is located, for example ``/OMERO/in-place-import``::
 
    $ cd /OMERO/in-place-import
 
-#. The importer1 (Facility Manager with ability to import for others) user logs in as user-1::
+#. The ``importer1`` (Facility Manager with ability to import for others) OMERO user logs in as ``user-1``::
 
    $ omero --sudo importer1 -u user-1 login
 
@@ -223,7 +246,7 @@ We import two folders named *siRNA-HeLa* and *condensation*. For this training, 
 
    - Click on |image3| to show the import details.
 
-   - Validate that In-place import is indicated \ |image4|\ .
+   - Validate that In-place import is indicated |image4| in case you imported "in-place".
 
 **Advantages:**
 
