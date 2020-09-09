@@ -59,7 +59,7 @@ Note: When importing for another user using the CLI, the ``importer1`` does not 
 Step-by-step
 ------------
 
-#. If you did not do so already, open a terminal wondow on your local machine and activate the conda environment where your ``omero-py`` is installed (see the Setup section above):: 
+#. If you did not do so already, open a terminal window on your local machine and activate the conda environment where your ``omero-py`` is installed (see the Setup section above):: 
 
    $ conda activate myenv
 
