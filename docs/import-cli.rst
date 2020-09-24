@@ -271,7 +271,7 @@ The following example shows how to do the import on CLI and follow-up operations
 
 See (reference) for rendering and (reference) for metadata.
 
-In many cases, the rendering and metadata import is preferable to be done separately, as the visual checking of the imported images might be crucial for further rendering and metadata import, see :doc:`render` and :doc:`metadata` for details on this. 
+In many cases, the rendering and metadata import is best done separately, as the visual checking of the imported images might be crucial for further rendering and metadata import, see :doc:`render` and :doc:`metadata` for details on this. 
 
 Further, the images you are importing might need a range or different rendeing settings, not just one settings for all of them. Also for this case, the step-by-step approach, first importing the images, then only deciding on the rendering strategy and preparing the `renderingdef.yml` files, is preferable.
 
