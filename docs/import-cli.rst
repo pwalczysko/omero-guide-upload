@@ -315,7 +315,7 @@ Step-by-step
    $  omero metadata populate --report --batch 1000 --file /path/to/downloaded/simple-annotation.csv $PID
    $  omero metadata populate --context bulkmap --cfg simple-annotation-bulkmap-config.yml --batch 100 $PID
 
-#. Login to OMERO.web and check that the images are imported, have the expected rendering setttings and also the annotations in the form of Key-Value pairs on each imported image.
+#. Log in to OMERO.web and check that the images are imported, have the expected rendering setttings and also the annotations in the form of Key-Value pairs on each imported image.
 
 For more information about CLI import options, go to `import.html <https://docs.openmicroscopy.org/latest/omero/users/cli/import.html>`_.
 
