@@ -299,7 +299,7 @@ Step-by-step
 
 #. Prepare an `renderingdef.yml` file, either creating a new one or downloading https://github.com/ome/training-scripts/blob/master/maintenance/preparation/renderingdef.yml.
 
-#. Prepare an `annotation.csv` file, by creating a new file or downloading the provided example file. In the example below, we use the file :download:`simple-annotation.csv <../scripts/simple-annotation.csv>`. The Dataset  names in this `CSV` file must match the Dataset names in OMERO as created and stored in the `DID` variable defined in the command here below. The Image names in the `CSV` file must match the file names in your imported folder.
+#. Prepare an `annotation.csv` file, by creating a new file or downloading the provided example file. In the example below, we use the file :download:`simple-annotation.csv <../scripts/simple-annotation.csv>`. The Dataset names in this `CSV` file must match the Dataset names in OMERO as created and stored in the `DID` variable defined in the command below. The Image names in the `CSV` file must match the file names in your imported folder.
 
 #. Prepare a `bulkmap-config.yml` file. In the example below, we use the file :download:`simple-annotation-bulkmap-config.yml <../scripts/simple-annotation-bulkmap-config.yml>`.
 
