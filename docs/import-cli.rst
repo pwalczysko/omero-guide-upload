@@ -303,7 +303,7 @@ Step-by-step
 
 #. Prepare a `bulkmap-config.yml` file. In the example below, we use the file :download:`simple-annotation-bulkmap-config.yml <../scripts/simple-annotation-bulkmap-config.yml>`.
 
-#. Login to the OMERO.server you wish to import to. This can be a remote server if you do not wish to import `in-place`.
+#. Log in to the OMERO.server you wish to import to. This can be a remote server if you do not wish to import `in-place`.
 
 #. Import and render in a single command sequence below::
 
