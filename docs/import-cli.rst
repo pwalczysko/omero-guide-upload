@@ -264,8 +264,8 @@ Note: Connecting over SSH is necessary only if you intend to import in-place. If
 
 -  Preparation of the .csv or .tsv file.
 
-Concatenate the CLI imports with post-import steps
-==================================================
+Combine the CLI imports with post-import steps
+==============================================
 
 The following example shows how to do the import on CLI and follow-up operations like rendering and metadata import in one step.
 
