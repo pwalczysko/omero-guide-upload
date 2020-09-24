@@ -269,8 +269,6 @@ Combine the CLI imports with post-import steps
 
 The following example shows how to do the import on CLI and follow-up operations like rendering and metadata import in one step.
 
-See (reference) for rendering and (reference) for metadata.
-
 In many cases, the rendering and metadata import is best done separately, as the visual checking of the imported images might be crucial for further rendering and metadata import, see :doc:`render` and :doc:`metadata` for details on this. 
 
 Further, the images you are importing might need a range or different rendering settings, not just one set of settings for all of them. Also for this case, the step-by-step approach, first importing the images, only then deciding on the rendering strategy and preparing the `renderingdef.yml` files, is preferable.
