@@ -295,7 +295,7 @@ Step-by-step
 
    $ export OMERODIR=/path/to/OMERO.server-x.x.x-ice36-bxx
 
-#. Prepare an `renderingdef.yml` file, either creating a new one or downloading https://github.com/ome/training-scripts/blob/master/maintenance/preparation/renderingdef.yml.
+#. Prepare an `renderingdef.yml` file, either creating by a new one or downloading https://github.com/ome/training-scripts/blob/master/maintenance/preparation/renderingdef.yml.
 
 #. Prepare an `annotation.csv` file, by creating a new file or downloading the provided example file. In the example below, we use the file :download:`simple-annotation.csv <../scripts/simple-annotation.csv>`. The Dataset names in this `CSV` file must match the Dataset names in OMERO as created in the `DID` variable definition line in the command below. The Image names in the `CSV` file must match the file names in your imported folder.
 
