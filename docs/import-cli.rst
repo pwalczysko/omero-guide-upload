@@ -309,7 +309,7 @@ Step-by-step
    $  DID=$(omero obj new Dataset name='siRNAi-HeLa')
    $  omero obj new ProjectDatasetLink parent=$PID child=$DID
    $  omero import -d $DID /path/to/data/folder/or/image/siRNAi-HeLa --file import.out
-   $  for i in $(cat import.out); do omero render set $i renderingdef.yml; done
+   $  omero render set $DID renderingdef.yml
    $  omero metadata populate --report --batch 1000 --file /path/to/downloaded/simple-annotation.csv $PID
    $  omero metadata populate --context bulkmap --cfg simple-annotation-bulkmap-config.yml --batch 100 $PID
 
