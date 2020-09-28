@@ -303,7 +303,7 @@ Step-by-step
 
 #. Log in to the OMERO.server you wish to import to. This can be a remote server if you do not wish to import `in-place`.
 
-#. Import and render in a single command sequence below::
+#. Import, render and annotate in a single command sequence below::
 
    $  PID=$(omero obj new Project name='Project_import_concatenate')
    $  DID=$(omero obj new Dataset name='siRNAi-HeLa')
