@@ -18,6 +18,8 @@ We will show:
 
 -  How to deal with imports of large amounts of data in CLI, using the --bulk option and helper csv and yml files which define what is to be imported and how.
 
+.. _Resources:
+
 Resources
 ---------
 
@@ -44,6 +46,8 @@ Resources
 -  Example files for bulk import
 
    -  :download:`bulk.yml <../scripts/bulk.yml>`
+
+.. _Setup:
 
 Setup
 -----
@@ -259,6 +263,57 @@ Note: Connecting over SSH is necessary only if you intend to import in-place. If
 **Limitations:**
 
 -  Preparation of the .csv or .tsv file.
+
+Combine the CLI imports with post-import steps
+==============================================
+
+The following example shows how to do the import on CLI and follow-up operations like rendering and metadata import in one step.
+
+In many cases, the rendering and metadata import is best done separately, as the visual checking of the imported images might be crucial for further rendering and metadata import, see :doc:`render` and :doc:`metadata` for details on this. 
+
+Further, the images you are importing might need a range of different rendering settings, not just one set of settings for all of them. Also for this case, the step-by-step approach, first importing the images, only then deciding on the rendering strategy and preparing the `renderingdef.yml` files, is preferable.
+
+Nevertheless, there are cases which do not need visual checks and use a single rendering for all images, for which a streamlined sequence of commands is offered below which will perform all three steps (import, rendering and metadata import) in one single session on the CLI.
+
+Resources
+---------
+
+Additionally to the :ref:`Resources mentioned in the import-cli section<Resources>` and in the :ref:`Setup<Setup>` you will also need the rendering and metadata plugins as mentioned in :doc:`render` and :doc:`metadata`, and possibly the following files:
+
+   - https://github.com/ome/training-scripts/blob/master/maintenance/preparation/renderingdef.yml
+   - :download:`simple-annotation.csv <../scripts/simple-annotation.csv>`
+   - :download:`simple-annotation-bulkmap-config.yml <../scripts/simple-annotation-bulkmap-config.yml>`
+
+Step-by-step
+------------
+
+#. If you did not do so already, open a terminal window on your local machine and activate the conda environment where your ``omero-py`` is installed (see the :ref:`Setup<Setup>`)::
+
+   $ conda activate myenv
+
+#. Set the ``OMERODIR`` variable to point to the downloaded and unzipped OMERO server dir (see the :ref:`Setup<Setup>`)::
+
+   $ export OMERODIR=/path/to/OMERO.server-x.x.x-ice36-bxx
+
+#. Prepare an `renderingdef.yml` file, by either creating a new one or downloading https://raw.githubusercontent.com/ome/training-scripts/master/maintenance/preparation/renderingdef.yml.
+
+#. Prepare an `annotation.csv` file, by creating a new file or downloading the provided example file. In the example below, we use the file :download:`simple-annotation.csv <../scripts/simple-annotation.csv>`. The Dataset names in this `CSV` file must match the Dataset names in OMERO as created in the `DID` variable definition line in the command below. The Image names in the `CSV` file must match the file names in your imported folder.
+
+#. Prepare a `bulkmap-config.yml` file. In the example below, we use the file :download:`simple-annotation-bulkmap-config.yml <../scripts/simple-annotation-bulkmap-config.yml>`.
+
+#. Log in to the OMERO.server you wish to import to. This can be a remote server if you do not wish to import `in-place`.
+
+#. Import, render and annotate in a single command sequence below::
+
+   $  PID=$(omero obj new Project name='Project_import_concatenate')
+   $  DID=$(omero obj new Dataset name='siRNAi-HeLa')
+   $  omero obj new ProjectDatasetLink parent=$PID child=$DID
+   $  omero import -d $DID /path/to/data/folder/or/image/siRNAi-HeLa --file import.out
+   $  omero render set $DID renderingdef.yml
+   $  omero metadata populate --report --batch 1000 --file /path/to/downloaded/simple-annotation.csv $PID
+   $  omero metadata populate --context bulkmap --cfg simple-annotation-bulkmap-config.yml --batch 100 $PID
+
+#. Log in to OMERO.web and check that the images are imported, have the expected rendering setttings and also the annotations in the form of Key-Value pairs on each imported image.
 
 For more information about CLI import options, go to `import.html <https://docs.openmicroscopy.org/latest/omero/users/cli/import.html>`_.
 
