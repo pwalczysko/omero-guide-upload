@@ -176,7 +176,7 @@ A user performing an in-place import MUST have:
 Bulk Import using the CLI
 =========================
 
-In this example, we show how to combine several import strategies using a configuration file. This is a strategy heavily used to import data to https://idr.openmicroscopy.org/.
+In this example, we show how to combine several import strategies using a configuration file. This is a strategy heavily used to import data to IDR.
 
 We import two folders named *siRNA-HeLa* and *condensation*.
 

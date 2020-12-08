@@ -23,7 +23,7 @@ Resources
 
 -  Data: example images from
 
-   -  IDR data http://idr.openmicroscopy.org/webclient/?show=project-51
+   -  IDR data `idr0021 <https://idr.openmicroscopy.org/search/?query=Name:idr0051>`__.
 
 -  Rendering plugin for OMERO 
 

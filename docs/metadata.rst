@@ -29,7 +29,7 @@ Resources
 
 -  Data: example images from
 
-   -  IDR data `idr0021-lawo-pericentriolarmaterial/experimentA <https://idr.openmicroscopy.org/webclient/?show=project-51>`_
+   -  IDR data `idr0021 <https://idr.openmicroscopy.org/search/?query=Name:idr0051>`__
    -  `siRNAi-HeLa <https://downloads.openmicroscopy.org/images/DV/siRNAi-HeLa/>`_ dataset
 
 -  Metadata plugin for OMERO
@@ -69,7 +69,7 @@ Step-by-step
 
     $ export PATH=/opt/omero/server/venv3/bin:$PATH
 
-#.  Download the CSV from `idr0021-experimentA-annotation.csv <https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-annotation.csv>`_ if you have access to the `idr0021 <https://idr.openmicroscopy.org/webclient/?show=project-51>`_ data  in your OMERO.server. Alternatively, download :download:`simple-annotation.csv <../scripts/simple-annotation.csv>`, which will allow you to work with the `siRNAi-HeLa <https://downloads.openmicroscopy.org/images/DV/siRNAi-HeLa/>`_ dataset.
+#.  Download the CSV from `idr0021-experimentA-annotation.csv <https://github.com/IDR/idr0021-lawo-pericentriolarmaterial/blob/9479af85f19487f215e3dfdd31a1b587370ed3cf/experimentA/idr0021-experimentA-annotation.csv>`_ if you have access to the `idr0021 <https://idr.openmicroscopy.org/search/?query=Name:idr0051>`__ data  in your OMERO.server. Alternatively, download :download:`simple-annotation.csv <../scripts/simple-annotation.csv>`, which will allow you to work with the `siRNAi-HeLa <https://downloads.openmicroscopy.org/images/DV/siRNAi-HeLa/>`_ dataset.
 
 #.  The variable ``$ID​`` below is the ID of the ​Project, in this example case it is the Project containing the idr0021 study. If you are working with the siRNAi-HeLa data, replace in the following example the "Project" with a "Dataset" and the ``idr0021-experimentA-annotation.csv`` with ``simple-annotation.csv``. To add annotations from a local CSV file to the images in the said Project or Dataset in the form of OMERO.tables, run::
     
