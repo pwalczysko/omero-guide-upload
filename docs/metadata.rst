@@ -99,31 +99,6 @@ Step-by-step
 
     |image3a|
 
-#.  Still in OMERO.web, create a new Dataset and copy into it four images, preferably images which have neither OMERO.tables on them nor any Key-Value pairs attached. Note the name of the images you are copying in.
-
-    |image4|
-
-#.  Go to the https://pypi.org/project/omero-metadata/ and find the section named ``populate``. Study the ``project.csv``. You can either take the ``project.csv`` file from there, or more conveniently, you can download directly its copy :download:`four-images.csv <../scripts/four-images.csv>`. Open the CSV file in Excel and edit the name of the images in the first column to match the names of the images you copied into your Dataset in the previous step. Also, edit the name of the Dataset in the second column to match the name of your Dataset in OMERO.web. Save the file locally as CSV.
-
-#.  In your OMERO.web, upload the CSV file you just saved and attach it onto the Dataset you created previously.
-
-    |image5|
-
-#.  Select the Dataset you created and attached to it the CSV. Find the script icon |image6| above the central pane, expand it and find the ``Import scripts`` section. In there, select the ``Populate metadata`` script.
-
-    |image7| 
-
-#.  Run the script.
-
-#.  Click again onto the Dataset in the left-hand pane to refresh and observe that there is a new Attachment in the right hand pane under "Attachments" harmonica. 
-
-    |image8|
-
-#.  Click on single images inside the Dataset and observe that in the "Tables" harmonica in the right-hand pane there are new values coming originally from your edited CSV.
-
-    |image9|
-
-
 .. |image0| image:: images/metadata1.png
    :width: 4in
    :height: 1in
