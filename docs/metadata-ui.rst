@@ -23,9 +23,10 @@ Resources
 
    -  IDR data `idr0021-lawo-pericentriolarmaterial/experimentA <https://idr.openmicroscopy.org/webclient/?show=project-51>`_
 
--  Annotation CSV files define the content of OMERO.tables for each image.
+-  Annotation CSV files define the content of OMERO.tables for each image or each well.
 
    - :download:`four-images.csv <../scripts/four-images.csv>`
+   - :download:`simple-screen.csv <../scripts/four-images.csv>`
 
 -  ``omero-metadata`` plugin (necessary for having full set of features in ``Populate Metadata`` script).
 
