@@ -1,0 +1,6 @@
+# header well,plate,s,d,l,d
+Well,Plate,Drug,Concentration,Cell_Count,Percent_Mitotic
+A1,plate01,DMSO,10.1,10,25.4
+A2,plate01,DMSO,0.1,1000,2.54
+A3,plate01,DMSO,5.5,550,4
+B1,plate01,DrugX,12.3,50,44.43
