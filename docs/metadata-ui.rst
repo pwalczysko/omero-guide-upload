@@ -140,7 +140,7 @@ Step-by-step
       If the target is a Project, the CSV file needs to specify Dataset Name and Image Name.
       If the target is a Dataset instead of a Project, the Dataset Name column is not needed. 
 
-      If the target is a Screen, the CSV file needs to specify Plate name and Well. If a ``# header`` is specified, column types must be ``well`` and ``plate``.
+      If the target is a Screen, the CSV file needs to specify Plate name and Well. If a ``# header`` is specified, column types must be ``well`` and ``plate``. If the target is a Plate, the CSV file **must not** specify a Plate column, but it must specify the Well column.
 
       Column names should not contain spaces if you want to be able to query by these columns.
 
