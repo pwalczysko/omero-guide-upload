@@ -96,13 +96,13 @@ Step-by-step
 
     |image5b|
 
-#.  Select the Screen you identified above. Find the script icon |image6| above the central pane, expand it and find the ``Import scripts`` section. In there, select the ``Populate metadata`` script.
+#.  Select the Screen you identified above. Find the script icon |image6| above the central pane, expand it and find the ``Import scripts`` section. In there, select the ``Populate metadata`` script which will launch the script dialog.
 
     |image7|
 
 #.  If you did not attach the CSV to the Screen, you can now click on the ``Browse`` button and select the CSV from your local machine.
 
-#.  Run the script.
+#.  Click ``OK`` to run the script, and wait for it to show as complete in the ``Activities`` panel in the top-right corner above the central pane.
 
 #.  Click again onto the Screen in the left-hand pane to refresh and observe that there is a new Attachment in the right hand pane under ``Attachments`` harmonica, named ``bulk_annotations``.
 
