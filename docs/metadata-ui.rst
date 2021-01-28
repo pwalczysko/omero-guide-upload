@@ -77,7 +77,7 @@ Step-by-step
 
 #.  If you did not attach the CSV to the Dataset, you can now click on the ``Browse`` button and select the CSV from your local machine.
 
-#.  Run the script.
+#.  Click ``OK`` to run the script, and wait for it to show as complete in the ``Activities`` panel in the top-right corner above the central pane.
 
 #.  Click again onto the Dataset in the left-hand pane to refresh and observe that there is a new Attachment in the right hand pane under "Attachments" harmonica, named ``bulk_annotations``. 
 
