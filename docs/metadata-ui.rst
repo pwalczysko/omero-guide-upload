@@ -4,9 +4,9 @@ Import metadata using the Populate Metadata script in OMERO.web
 Description
 -----------
 
-This chapter will show how to import metadata starting from a local CSV file and ending with OMERO.tables on images or wells using the `server-side script <https://omero-guides.readthedocs.io/en/latest/scripts/docs/index.html>`__ Populate Metadata in OMERO.web. See also the workflow described in :doc:`metadata` which will give you more possibilities, such as Key-Value Pairs creation, but which is using Command Line Interface (CLI). The workflow described here is using only graphical user interface elements.
+This chapter will show how to import metadata starting from a local CSV file and ending with OMERO.tables on Images or wells using the `server-side script <https://omero-guides.readthedocs.io/en/latest/scripts/docs/index.html>`__ Populate Metadata in OMERO.web. See also the workflow described in :doc:`metadata` which will give you more possibilities, such as Key-Value Pairs creation, but which is using Command Line Interface (CLI). The workflow described here is using only graphical user interface elements.
 
-This action is typically done after a successful import of images.
+This action is typically done after a successful import of Images.
 
 We will show:
 
@@ -57,11 +57,11 @@ Step-by-step
 *Project/Dataset/Image*
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-#.  Log in to OMERO.web, create a new Dataset and copy into it four images, preferably images which have no OMERO.tables on them. Note the name of the images you are copying in.
+#.  Log in to OMERO.web, create a new Dataset and copy into it four Images, preferably Images which have no OMERO.tables on them. Note the name of the Images you are copying in.
 
     |image4|
 
-#.  Download :download:`four-images.csv <../scripts/four-images.csv>`. Open the CSV file in Excel and edit the name of the images in the first column to match the names of the images you copied into your Dataset in the previous step. Also, edit the name of the Dataset in the second column to match the name of your Dataset in OMERO.web. Save the file locally as CSV.
+#.  Download :download:`four-images.csv <../scripts/four-images.csv>`. Open the CSV file in Excel and edit the name of the Images in the first column to match the names of the Images you copied into your Dataset in the previous step. Also, edit the name of the Dataset in the second column to match the name of your Dataset in OMERO.web. Save the file locally as CSV.
 
 #.  (Optional) In your OMERO.web, upload the CSV file you just saved and attach it onto the Dataset you created previously. Alternatively, you can skip this step, and point the ``Populate Metadata`` script to the local CSV, as explained below.
 
@@ -79,7 +79,7 @@ Step-by-step
 
     |image8|
 
-#.  Click on single images inside the Dataset and observe that in the "Tables" harmonica in the right-hand pane there are new values coming originally from your edited CSV.
+#.  Click on single Images inside the Dataset and observe that in the "Tables" harmonica in the right-hand pane there are new values coming originally from your edited CSV.
 
     |image9|
 
@@ -113,7 +113,7 @@ Step-by-step
 *Create a metadata CSV*
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-#.  Download the :download:`four-images.csv <../scripts/four-images.csv>` (for images in Projects/Datasets) or :download:`simple-screen.csv <../scripts/simple-screen.csv>` (for Wells in Screens/Plates) as templates to create your own CSV.
+#.  Download the :download:`four-images.csv <../scripts/four-images.csv>` (for Images in Projects/Datasets) or :download:`simple-screen.csv <../scripts/simple-screen.csv>` (for Wells in Screens/Plates) as templates to create your own CSV.
 
 #.  Open the downloaded CSV file in Microsoft EXcel, but do not use ``Import`` command in Excel, instead, either double-click on the file or use the ``Open`` command in Excel. Populate the values in the CSV using Microsoft Excel with your own numbers or text, possibly expanding the number of rows or columns as appropriate. 
 
