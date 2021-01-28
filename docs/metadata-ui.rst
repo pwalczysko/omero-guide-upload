@@ -71,7 +71,7 @@ Step-by-step
 
     |image5|
 
-#.  Select the Dataset you created and attached to it the CSV. Find the script icon |image6| above the central pane, expand it and find the ``Import scripts`` section. In there, select the ``Populate metadata`` script.
+#.  Select the Dataset you created. Find the script icon |image6| above the central pane, expand it and find the ``Import scripts`` section. In there, select the ``Populate metadata`` script which will launch the script dialog.
 
     |image7|
 
