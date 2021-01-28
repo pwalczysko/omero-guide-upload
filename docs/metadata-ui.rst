@@ -19,10 +19,6 @@ We will show:
 Resources
 ---------
 
--  Data: example images from
-
-   -  IDR data `idr0021-lawo-pericentriolarmaterial/experimentA <https://idr.openmicroscopy.org/webclient/?show=project-51>`_
-
 -  Annotation CSV files define the content of OMERO.tables for each image or each well.
 
    - :download:`four-images.csv <../scripts/four-images.csv>`
