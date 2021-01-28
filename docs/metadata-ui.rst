@@ -96,7 +96,7 @@ Step-by-step
 
     |image5b|
 
-#.  Select the Screen you identified above and (optionally) attached to it the CSV. Find the script icon |image6| above the central pane, expand it and find the ``Import scripts`` section. In there, select the ``Populate metadata`` script.
+#.  Select the Screen you identified above. Find the script icon |image6| above the central pane, expand it and find the ``Import scripts`` section. In there, select the ``Populate metadata`` script.
 
     |image7|
 
