@@ -12,6 +12,7 @@ Contents:
    import
    render
    metadata
+   metadata-ui
 
 **Contribute**
 --------------
