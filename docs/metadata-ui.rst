@@ -11,6 +11,7 @@ This action is typically done after a successful import of Images.
 We will show:
 
 - How to import metadata from local CSV file in a bulk manner and turn them into OMERO.tables on
+
    - :ref:`Images contained in Projects/Datasets<Populatemetadatapdi>`
    - :ref:`Wells contained in Screens/Plates<Populatemetadataspw>`
 
@@ -22,7 +23,7 @@ Resources
 -  Annotation CSV files define the content of OMERO.tables for each image or each well.
 
    - :download:`four-images.csv <../scripts/four-images.csv>`
-   - :download:`simple-screen.csv <../scripts/four-images.csv>`
+   - :download:`simple-screen.csv <../scripts/simple-screen.csv>`
 
 -  ``omero-metadata`` plugin (necessary for having full set of features in ``Populate Metadata`` script).
 
