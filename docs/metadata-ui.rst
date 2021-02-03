@@ -116,7 +116,7 @@ Step-by-step
 
 #.  Download the :download:`four-images.csv <../scripts/four-images.csv>` (for Images in Projects/Datasets) or :download:`simple-screen.csv <../scripts/simple-screen.csv>` (for Wells in Screens/Plates) as templates to create your own CSV.
 
-#.  Open the downloaded CSV file in Microsoft EXcel, but do not use ``Import`` command in Excel, instead, either double-click on the file or use the ``Open`` command in Excel. Populate the values in the CSV using Microsoft Excel with your own numbers or text, possibly expanding the number of rows or columns as appropriate. 
+#.  Open the downloaded CSV file in Microsoft Excel, but do not use ``Import`` command in Excel, instead, either double-click on the file or use the ``Open`` command in Excel. Populate the values in the CSV using Microsoft Excel with your own numbers or text, possibly expanding the number of rows or columns as appropriate.
 
 #.  Replace the ``# header ...`` column types inside the templates with your own column types according to the content of your CSV: Follow the Note below for guidelines. Save the file as CSV in Microsoft Excel.
 
